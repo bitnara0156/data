@@ -7,9 +7,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: #333333;
   background: #f6f9fc;
+ 
+  
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+	
+}
+
+.data-table-extensions > .data-table-extensions-filter > .icon{
+	
+	
 }

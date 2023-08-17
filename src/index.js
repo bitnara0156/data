@@ -23,10 +23,15 @@ function App() {
           noHeader
           defaultSortField="id"
           defaultSortAsc={false}
-          pagination
+			fixedHeader
+			responsive={true}
+			pagination
+			paginationPerPage={12}
+
           highlightOnHover
         />
       </DataTableExtensions>
+	  
     </div>
   );
 }
