@@ -15,16 +15,16 @@ function App() {
   useEffect(() => {
     (async () => {
       const response = await fetch(
-        "https://sheetdb.io/api/v1/rebnctwy2n27y"
+        "https://sheetdb.io/api/v1/ww2jgrca6vv6s"
       );
       const parsed = await response.json();
       setData(parsed);
     })();
   }, []);
+
   const tableData = {
     columns,
-    data,
-    setData
+    data
   };
   return (
     <div className="main">
@@ -32,10 +32,9 @@ function App() {
       <DataTableExtensions {...tableData}>
         <DataTable
           columns={columns}
-          data={data}
+          data={JSON.stringify(data, null, 2)}
           noHeader
-          defaultSortField="ID"
-          defaultSortAsc={true}
+
 			fixedHeader
 			responsive={true}
 			pagination

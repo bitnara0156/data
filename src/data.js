@@ -28,7 +28,7 @@ export const columns = [
   {
     name: "OLT-SW-Port-Number",
     selector: "OLT-SW-Port-Number",
-	width:"150px",
+	width:"200px",
 	wrap: true,
     sortable: true,
 
