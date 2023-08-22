@@ -3,24 +3,24 @@ import ReactDOM from "react-dom";
 import DataTable from "react-data-table-component";
 import DataTableExtensions from "react-data-table-component-extensions";
 import "react-data-table-component-extensions/dist/index.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import Papa from "papaparse";
 import { columns} from "./data";
 
 import "./styles.css";
 
-function App() {
+const App = () => {
 
   const [data, setData] = useState({});
+  Papa.parse("https://docs.google.com/spreadsheets/d/e/2PACX-1vSuW8OF_fN0t--HhhfjYEF_wHZQpwjt9gX0BIDoEIhVz8q06Mu2tFRvGyIEF_Ke1ICm5StaFiLt-V3F/pub?gid=749001201&single=true&output=csv", {
+    download: true,
+    header: true,
+    complete: (results) => {
+      setData(results.data);
 
-  useEffect(() => {
-    (async () => {
-      const response = await fetch(
-        "https://sheetdb.io/api/v1/ww2jgrca6vv6s"
-      );
-      const parsed = await response.json();
-      setData(parsed);
-    })();
-  }, []);
+    },
+  });
+
 
   const tableData = {
     columns,

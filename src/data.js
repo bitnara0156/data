@@ -12,7 +12,7 @@ export const columns = [
 
   {
     name: "Site Name",
-    selector: "Site Name",
+    selector: "Site-Name",
 	wrap: true,
 	width:"200px",
     sortable: true
@@ -20,7 +20,7 @@ export const columns = [
 	{
 		name: "Customer Name",
 
-		selector: "Customer Name",
+		selector: "Customer-Name",
 	width:"200px",
 	wrap: true,
 		sortable: true
@@ -35,14 +35,14 @@ export const columns = [
   },
   {
     name: "IP Addrees\n/PPOE Name",
-    selector: "IP Addrees\n/PPOE Name",
+    selector: "IPAddrees-PPOE",
 	width:"150px",
 	wrap: true,
     sortable: true
   },
   {
     name: "Device Serial \nNumber",
-    selector: "Device Serial \nNumber",
+    selector: "Device-Serial",
 	width:"150px",
 	wrap: true,
     sortable: true
@@ -50,14 +50,14 @@ export const columns = [
 
   {
     name: "Bras Name",
-    selector: "Bras Name",
+    selector: "Bras",
 	width:"200px",
 	wrap: true,
     sortable: true
   },
   {
     name: "VLAN ID",
-    selector: "VLAN ID",
+    selector: "VLAN-ID",
 	width:"60px",
     sortable: true
   },
@@ -83,7 +83,7 @@ export const columns = [
 	},
   {
     name: "Gateway/\nPassword",
-    selector: "Gateway/\nPassword",
+    selector: "Gateway-Password",
 	wrap: true,
     sortable: true
   },
