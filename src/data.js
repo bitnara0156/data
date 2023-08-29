@@ -1,5 +1,4 @@
-
-
+import React, { Component }  from 'react';
 export const columns = [
 	{
     name: "ID",
@@ -34,14 +33,19 @@ export const columns = [
 
   },
   {
-    name: "IP Addrees\n/PPOE Name",
-    selector: "IPAddrees-PPOE",
+    name: "IP Addrees PPOE Name",
+    selector: "IPAddrees_PPOE",
 	width:"150px",
 	wrap: true,
-    sortable: true
+    sortable: true,
+		cell: (data) => (
+			<a href={data.GRAPH} target="_blank" className="dlink">
+				{data.IPAddrees_PPOE}
+			</a>
+		)
   },
   {
-    name: "Device Serial \nNumber",
+    name: "Device Serial nNumber",
     selector: "Device-Serial",
 	width:"150px",
 	wrap: true,
@@ -66,6 +70,7 @@ export const columns = [
     selector: "Zone",
 	width: "50px",
     sortable: true
+
   },
   {
     name: "Bandwidth",
@@ -82,10 +87,11 @@ export const columns = [
 		sortable: true
 	},
   {
-    name: "Gateway/\nPassword",
+    name: "Gateway nPassword",
     selector: "Gateway-Password",
 	wrap: true,
     sortable: true
+
   },
 
 ];
